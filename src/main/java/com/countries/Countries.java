@@ -22,12 +22,15 @@ public class Countries {
             for (Object value : array) {
                 list.add((JSONObject) value);
             }
+
             list.sort(new PopulationComparator());
+
             System.out.println();
             System.out.println("********************************************");
             System.out.println("Top 10 countries with the biggest population");
             System.out.println("********************************************");
             System.out.println();
+
             for (JSONObject obj : list.subList(0, 10)) {
                 System.out.println("Country: " + obj.get("name"));
                 System.out.println("Capital: " + obj.get("capital"));
@@ -51,12 +54,15 @@ public class Countries {
             for (Object value : array) {
                 list.add((JSONObject) value);
             }
+
             list.sort(new AreaComparator());
+
             System.out.println();
             System.out.println("**************************************");
             System.out.println("Top 10 countries with the biggest area");
             System.out.println("**************************************");
             System.out.println();
+
             for (JSONObject obj : list.subList(0, 10)) {
                 System.out.println("Country: " + obj.get("name"));
                 System.out.println("Capital: " + obj.get("capital"));
@@ -80,12 +86,15 @@ public class Countries {
             for (Object value : array) {
                 list.add((JSONObject) value);
             }
+
             list.sort(new DensityComparator());
+
             System.out.println();
             System.out.println("*************************************************************************");
             System.out.println("Top 10 countries with the biggest population density (people / square km)");
             System.out.println("*************************************************************************");
             System.out.println();
+
             for (JSONObject obj : list.subList(0, 10)) {
                 System.out.println("Country: " + obj.get("name"));
                 System.out.println("Capital: " + obj.get("capital"));
